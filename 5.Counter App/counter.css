@@ -1,0 +1,107 @@
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3); }
+    50% { box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7); }
+    100% { box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #ff416c, #ff4b2b);
+    background-size: 400% 400%;
+    animation: bgAnimation 2s ease infinite;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 80px;
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #222831, #393e46, #00adb5);
+    animation: glow 1s infinite alternate;
+    color: white;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+#counter {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #fff;
+    text-shadow: 3px 3px 15px rgba(255, 255, 255, 0.5);
+    animation: bounce 2s infinite;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.buttons button {
+    padding: 18px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.buttons button:nth-child(1) {
+    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+    color: white;
+    animation: glow 2s infinite alternate;
+}
+
+.buttons button:nth-child(2) {
+    background: linear-gradient(135deg, #f2994a, #f2c94c);
+    color: white;
+    animation: glow 3s infinite alternate;
+}
+
+.buttons button:nth-child(3) {
+    background: linear-gradient(135deg, #000428, #004e92);
+    color: white;
+    animation: glow 4s infinite alternate;
+}
+
+.buttons button:active {
+    transform: scale(0.9);
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
