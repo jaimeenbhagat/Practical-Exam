@@ -1,0 +1,21 @@
+.app-container {
+  text-align: center;
+  margin-top: 100px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0984e3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #74b9ff;
+}
